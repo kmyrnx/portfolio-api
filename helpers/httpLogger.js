@@ -14,5 +14,5 @@ module.exports.httpFileLogger = morgan('combined', {
 });
 
 module.exports.httpConsoleLogger = morgan('combined', {
-  skip: (_req, res) => res.statusCode < 400,
+  skip: (_req, res) => res.statusCode < 400 || process.env.NODE_ENV === 'test',
 });
