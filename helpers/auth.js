@@ -11,10 +11,10 @@ module.exports.authenticate = (req, res, next) => {
   const { authorization } = req.headers;
   const token = authorization && authorization.split(' ')[1];
 
-  if (!token) return res.status(401).json({ error: 'No token provided' });
+  if (!token) return res.status(400).json({ error: 'No token provided' });
 
   jwt.verify(token, process.env.TOKEN_SECRET, (err, user) => {
-    if (err) return res.status(403).json({ error: 'Invalid token' });
+    if (err) return res.status(400).json({ error: 'Invalid token' });
     req.user = user;
     next();
   });
