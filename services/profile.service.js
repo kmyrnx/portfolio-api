@@ -9,9 +9,9 @@ module.exports.createProfile = async (profile) => {
   return newProfile.save();
 };
 
-module.exports.updateProfile = async (profile) => ProfileModel
+module.exports.updateProfile = async (profile) => (profile ? ProfileModel
   .findOneAndUpdate(
     { },
     { ...profile, lastModified: new Date() },
     { returnDocument: 'after', lean: true },
-  ).select('-user');
+  ).select('-user') : null);
