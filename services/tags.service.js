@@ -15,4 +15,4 @@ module.exports.updateTag = async (tag, newTag) => TagModel
     { returnDocument: 'after', lean: true },
   );
 
-module.exports.deleteTag = async (tag) => TagModel.findOneAndDelete({ name: tag });
+module.exports.deleteTag = async (tag) => TagModel.findOneAndDelete({ slug: tag });
