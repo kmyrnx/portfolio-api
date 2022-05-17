@@ -4,7 +4,7 @@ const slugify = require('../helpers/slugify');
 module.exports.createTag = async (tag) => TagModel.create({ name: tag, slug: slugify(tag) });
 
 module.exports.getTag = async (tag) => TagModel
-  .findOne({ slug: tag }).select('name slug').lean();
+  .findOne({ slug: tag }).lean();
 
 module.exports.getTags = async () => TagModel.find().select('name slug').lean();
 
