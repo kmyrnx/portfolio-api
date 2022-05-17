@@ -31,10 +31,6 @@ Performs text search (using title and tags) on the projects.
 ### User
 Supports create, sign-in and change password for the user.
 
-### To-Do
-- [ ] Add unit tests kmyrnx/portfolio-api#1
-- [ ] Add endpoints tests kmyrnx/portfolio-api#2
-
 ## Installation
 Clone the repository and run `npm install` to install the dependencies, fill the provided `.env` file then run `npm start` to start the application.
 
@@ -43,38 +39,60 @@ The following structure organizes components.
 
 ```
 ├── README.md
+├── app.js
 ├── controllers
-│   ├── profile.controller.js
-│   ├── projects.controller.js
-│   ├── search.controller.js
-│   ├── tags.controller.js
-│   └── user.controller.js
+│   ├── profile.controller.js
+│   ├── projects.controller.js
+│   ├── search.controller.js
+│   ├── tags.controller.js
+│   └── user.controller.js
 ├── db
-│   └── conn.js
+│   └── conn.js
 ├── helpers
-│   ├── auth.js
-│   ├── httpLogger.js
-│   ├── logger.js
-│   ├── rateLimiter.js
-│   └── slugify.js
+│   ├── auth.js
+│   ├── httpLogger.js
+│   ├── logger.js
+│   ├── rateLimiter.js
+│   └── slugify.js
+├── jest.config.js
+├── logs
+│   ├── app
+│   │   └── 2022-05-18.json
+│   └── http
+│       └── http.log
 ├── models
-│   ├── profile.model.js
-│   ├── project.model.js
-│   ├── tag.model.js
-│   └── user.model.js
+│   ├── profile.model.js
+│   ├── project.model.js
+│   ├── tag.model.js
+│   └── user.model.js
+├── package-lock.json
 ├── package.json
 ├── routes
-│   ├── index.js
-│   ├── profile.js
-│   ├── projects.js
-│   ├── search.js
-│   ├── tags.js
-│   └── user.js
+│   ├── index.js
+│   ├── profile.js
+│   ├── projects.js
+│   ├── search.js
+│   ├── tags.js
+│   └── user.js
 ├── server.js
-└── services
-    ├── profile.service.js
-    ├── projects.service.js
-    ├── search.service.js
-    ├── tags.service.js
-    └── user.service.js
+├── services
+│   ├── profile.service.js
+│   ├── projects.service.js
+│   ├── search.service.js
+│   ├── tags.service.js
+│   └── user.service.js
+└── tests
+    ├── db.js
+    ├── helpers.test.js
+    └── routes.test.js
+```
+
+## Tests
+```
+=============================== Coverage summary ===============================
+Statements   : 96.5% ( 276/286 )
+Branches     : 93.75% ( 60/64 )
+Functions    : 87.35% ( 76/87 )
+Lines        : 96.19% ( 253/263 )
+================================================================================
 ```
