@@ -8,7 +8,10 @@ module.exports.connectToDatabase = async () => mongoose.connect(connectionString
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-  .catch((err) => logger.error(err.message));
+  .catch((err) => {
+    /* istanbul ignore next */
+    logger.error(err.message);
+  });
 
 module.exports.connection = mongoose.connection;
 
