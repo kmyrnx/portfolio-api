@@ -38,6 +38,9 @@ Clone the repository and run `npm install` to install the dependencies, fill the
 The following structure organizes components.
 
 ```
+├── .env.sample
+├── .eslintrc.json
+├── .gitignore
 ├── README.md
 ├── app.js
 ├── controllers
@@ -55,11 +58,6 @@ The following structure organizes components.
 │   ├── rateLimiter.js
 │   └── slugify.js
 ├── jest.config.js
-├── logs
-│   ├── app
-│   │   └── 2022-05-18.json
-│   └── http
-│       └── http.log
 ├── models
 │   ├── profile.model.js
 │   ├── project.model.js
