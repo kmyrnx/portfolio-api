@@ -1,6 +1,6 @@
 # Portfolio API
 
-This is a simple REST API to build a portfolio that I have built using for educational purposes only. While it is working, keep in mind it needs enhancements. However, clone/fork it happily and enjoy! :smile:
+This is a simple REST API to build a portfolio that I have built for educational purposes only. While it is working, keep in mind it needs enhancements. However, clone/fork it happily and enjoy! :smile:
 
 ## Notes
 - This is a single user application (You can easily extend it).
